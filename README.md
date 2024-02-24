@@ -1,7 +1,5 @@
 # child_nutrition_consulting_chatbot
 
-## Expert Systems Principles and Programming, Third Edition-Course Technology
-
 ### Bài tập môn Các hệ thống dựa trên tri thức
 ### Đề tài : Xây dựng hệ thống chatbot tư vấn dinh dưỡng cho người cao tuổi
 * Xây dựng hệ thống chatbot tư vấn dinh dưỡng cao tuổi
