@@ -1,0 +1,136 @@
+CÁC DỮ LIỆU ĐẦU VÀO
+****Các tập luật phục vụ suy diễn lùi:
+    R1: S01->D1
+    R2: S02->D1
+    R3: S03->D1
+    R4: S06->D2
+    R5: S07->D1
+    R6: S07->D2
+    R7: S08->D2
+    R8: S09->D2
+    R9: S10->D2
+    R10: S10->D9
+    R11: S11->D2
+    R12: S12->D1
+    R13: S12->D2
+    R14: S13->D2
+    R15: S14->D3
+    R16: S14->D6
+    R17: S15->D3
+    R18: S15->D4
+    R19: S17->D3
+    R20: S17->D7
+    R21: S19->D4
+    R22: S20->D4
+    R23: S21->D4
+    R24: S22->D4
+    R25: S24->D5
+    R26: S26->D5
+    R27: S27->D5
+    R28: S28->D5
+    R29: S29->D5
+    R30: S30->D5
+    R31: S31->D6
+    R32: S32->D6
+    R33: S33->D6
+    R34: S34->D6
+    R35: S34->D9
+    R36: S35->D6
+    R37: S36->D6
+    R38: S37->D6
+    R39: S38->D7
+    R40: S39->D7
+    R41: S40->D7
+    R42: S42->D7
+    R43: S43->D8
+    R44: S43->D9
+    R45: S44->D8
+    R46: S44->D9
+    R47: S45->D8
+
+****Các triệu chứng người dùng gặp phải: 
+    S18, S20, S21.
+
+****Các bệnh dự đoán người dùng mắc phải:
+    None.
+
+THỰC HIỆN SUY DIỄN TIẾN 
+
+    Vòng lặp thứ 1:
+    R1:S01->D1 Không được áp dụng, vì thiếu fact: S01
+    R2:S02->D1 Không được áp dụng, vì thiếu fact: S02
+    R3:S03->D1 Không được áp dụng, vì thiếu fact: S03
+    R4:S06->D2 Không được áp dụng, vì thiếu fact: S06
+    R5:S07->D1 Không được áp dụng, vì thiếu fact: S07
+    R6:S07->D2 Không được áp dụng, vì thiếu fact: S07
+    R7:S08->D2 Không được áp dụng, vì thiếu fact: S08
+    R8:S09->D2 Không được áp dụng, vì thiếu fact: S09
+    R9:S10->D2 Không được áp dụng, vì thiếu fact: S10
+    R10:S10->D9 Không được áp dụng, vì thiếu fact: S10
+    R11:S11->D2 Không được áp dụng, vì thiếu fact: S11
+    R12:S12->D1 Không được áp dụng, vì thiếu fact: S12
+    R13:S12->D2 Không được áp dụng, vì thiếu fact: S12
+    R14:S13->D2 Không được áp dụng, vì thiếu fact: S13
+    R15:S14->D3 Không được áp dụng, vì thiếu fact: S14
+    R16:S14->D6 Không được áp dụng, vì thiếu fact: S14
+    R17:S15->D3 Không được áp dụng, vì thiếu fact: S15
+    R18:S15->D4 Không được áp dụng, vì thiếu fact: S15
+    R19:S17->D3 Không được áp dụng, vì thiếu fact: S17
+    R20:S17->D7 Không được áp dụng, vì thiếu fact: S17
+    R21:S19->D4 Không được áp dụng, vì thiếu fact: S19
+    R22:S20->D4 được áp dụng. Cập nhật flag1. Facts S18, S20, S21 suy ra D4.
+
+
+    Vòng lặp thứ 2:
+    R1:S01->D1 Không được áp dụng, vì thiếu fact: S01
+    R2:S02->D1 Không được áp dụng, vì thiếu fact: S02
+    R3:S03->D1 Không được áp dụng, vì thiếu fact: S03
+    R4:S06->D2 Không được áp dụng, vì thiếu fact: S06
+    R5:S07->D1 Không được áp dụng, vì thiếu fact: S07
+    R6:S07->D2 Không được áp dụng, vì thiếu fact: S07
+    R7:S08->D2 Không được áp dụng, vì thiếu fact: S08
+    R8:S09->D2 Không được áp dụng, vì thiếu fact: S09
+    R9:S10->D2 Không được áp dụng, vì thiếu fact: S10
+    R10:S10->D9 Không được áp dụng, vì thiếu fact: S10
+    R11:S11->D2 Không được áp dụng, vì thiếu fact: S11
+    R12:S12->D1 Không được áp dụng, vì thiếu fact: S12
+    R13:S12->D2 Không được áp dụng, vì thiếu fact: S12
+    R14:S13->D2 Không được áp dụng, vì thiếu fact: S13
+    R15:S14->D3 Không được áp dụng, vì thiếu fact: S14
+    R16:S14->D6 Không được áp dụng, vì thiếu fact: S14
+    R17:S15->D3 Không được áp dụng, vì thiếu fact: S15
+    R18:S15->D4 không áp dụng, vì D4 nắm trong số các facts. Cập nhật flag2.
+    R19:S17->D3 Không được áp dụng, vì thiếu fact: S17
+    R20:S17->D7 Không được áp dụng, vì thiếu fact: S17
+    R21:S19->D4 không áp dụng, vì D4 nắm trong số các facts. Cập nhật flag2.
+    R22:S20->D4 bỏ qua, vì flag1 đã được cập nhật.
+    R23:S21->D4 không áp dụng, vì D4 nắm trong số các facts. Cập nhật flag2.
+    R24:S22->D4 không áp dụng, vì D4 nắm trong số các facts. Cập nhật flag2.
+    R25:S24->D5 Không được áp dụng, vì thiếu fact: S24
+    R26:S26->D5 Không được áp dụng, vì thiếu fact: S26
+    R27:S27->D5 Không được áp dụng, vì thiếu fact: S27
+    R28:S28->D5 Không được áp dụng, vì thiếu fact: S28
+    R29:S29->D5 Không được áp dụng, vì thiếu fact: S29
+    R30:S30->D5 Không được áp dụng, vì thiếu fact: S30
+    R31:S31->D6 Không được áp dụng, vì thiếu fact: S31
+    R32:S32->D6 Không được áp dụng, vì thiếu fact: S32
+    R33:S33->D6 Không được áp dụng, vì thiếu fact: S33
+    R34:S34->D6 Không được áp dụng, vì thiếu fact: S34
+    R35:S34->D9 Không được áp dụng, vì thiếu fact: S34
+    R36:S35->D6 Không được áp dụng, vì thiếu fact: S35
+    R37:S36->D6 Không được áp dụng, vì thiếu fact: S36
+    R38:S37->D6 Không được áp dụng, vì thiếu fact: S37
+    R39:S38->D7 Không được áp dụng, vì thiếu fact: S38
+    R40:S39->D7 Không được áp dụng, vì thiếu fact: S39
+    R41:S40->D7 Không được áp dụng, vì thiếu fact: S40
+    R42:S42->D7 Không được áp dụng, vì thiếu fact: S42
+    R43:S43->D8 Không được áp dụng, vì thiếu fact: S43
+    R44:S43->D9 Không được áp dụng, vì thiếu fact: S43
+    R45:S44->D8 Không được áp dụng, vì thiếu fact: S44
+    R46:S44->D9 Không được áp dụng, vì thiếu fact: S44
+    R47:S45->D8 Không được áp dụng, vì thiếu fact: S45
+
+
+KẾT LUẬN BỆNH NGHI NGỜ NGƯỜI DÙNG MẮC PHẢI
+     Kết quả là : S18, S20, S21, D4 .
+     Đường đi suy diễn được là:R22

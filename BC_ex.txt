@@ -1,0 +1,87 @@
+CÁC DỮ LIỆU ĐẦU VÀO
+****Các tập luật phục vụ suy diễn lùi:
++ R1: S01,S02,S03->D1
++ R2: S02,S03,S04,S07->D1
++ R3: S02,S03,S07,S08->D1
++ R4: S03,S04,S07,S08->D1
++ R5: S05,S06,S07,S08,S09->D2
++ R6: S05,S06,S07,S08,S10,S11->D2
++ R7: S05,S06,S07,S10,S11,S12->D2
++ R8: S06,S07,S08,S13->D2
++ R9: S07,S08,S09,S13->D2
++ R10: S07,S08,S10,S11,S12,S13->D2
++ R11: S05,S14,S15,S18->D3
++ R12: S05,S14,S16,S18->D3
++ R13: S05,S14,S17,S18->D3
++ R14: S14,S15,S16,S17,S18->D3
++ R15: S15,S18,S19,S20,S21->D4
++ R16: S15,S18,S19,S20,S22->D4
++ R17: S15,S18,S20,S21,S22->D4
++ R18: S18,S19,S20,S21,S22->D4
++ R19: S05,S23,S24,S28,S29->D5
++ R20: S05,S24,S25,S26,S27,S30->D5
++ R21: S05,S24,S25,S29,S30->D5
++ R22: S24,S25,S27,S29,S30->D5
++ R23: S25,S27,S28,S29,S30->D5
++ R24: S26,S27,S28,S29,S30->D5
++ R25: S05,S14,S16,S32,S35->D6
++ R26: S05,S14,S16,S25,S32,S33->D6
++ R27: S05,S14,S25,S31,S32,S36->D6
++ R28: S14,S25,S31,S32,S32,S34,S37->D6
++ R29: S16,S25,S33,S35,S37->D6
++ R30: S17,S18,S38,S39->D7
++ R31: S17,S18,S38,S40->D7
++ R32: S17,S18,S40,S41,S42->D7
++ R33: S18,S38,S39,S41,S42->D7
++ R34: S18,S39,S40,S41,S42->D7
++ R35: S25,S43,S45->D8
++ R36: S25,S44,S45->D8
++ R37: S05,S10,S34,S43->D9
++ R38: S05,S10,S34,S44->D9
++ R39: S05,S25,S34,S43,S46->D9
++ R40: S10,S25,S43,S44,S46->D9
+
+****Các triệu chứng người dùng gặp phải: 
+    S18, S20, S21, S15, S22.
+
+****Các bệnh dự đoán người dùng mắc phải:
+    D4.
+
+THỰC HIỆN SUY DIỄN LÙI 
+  Bước 1: Goal D4. 
+     Tìm thấy luật R15:S15,S18,S19,S20,S21->D4.
+     Các goals mới cần chứng mình là S15, S18, S19, S20, S21.
+  Bước 2: -Goal S15. 
+     Cập nhật triệu chứng S15, bởi vì được tìm thấy trong tập triệu chứng gốc S18, S20, S21, S15, S22. Trả về thành công.
+  Bước 3: -Goal S18. 
+     Cập nhật triệu chứng S18, bởi vì được tìm thấy trong tập triệu chứng gốc S18, S20, S21, S15, S22. Trả về thành công.
+  Bước 4: -Goal S19. 
+     Không có luật nào để suy diễn/không có triệu chứng này ban đầu. Trả về thất bại.
+  Bước 5: Goal D4. 
+     Tìm thấy luật R16:S15,S18,S19,S20,S22->D4.
+     Các goals mới cần chứng mình là S15, S18, S19, S20, S22.
+  Bước 6: -Goal S15. 
+     Cập nhật triệu chứng S15, bởi vì được tìm thấy trong tập triệu chứng gốc S18, S20, S21, S15, S22. Trả về thành công.
+  Bước 7: -Goal S18. 
+     Cập nhật triệu chứng S18, bởi vì được tìm thấy trong tập triệu chứng gốc S18, S20, S21, S15, S22. Trả về thành công.
+  Bước 8: -Goal S19. 
+     Không có luật nào để suy diễn/không có triệu chứng này ban đầu. Trả về thất bại.
+  Bước 9: Goal D4. 
+     Tìm thấy luật R17:S15,S18,S20,S21,S22->D4.
+     Các goals mới cần chứng mình là S15, S18, S20, S21, S22.
+  Bước 10: -Goal S15. 
+     Cập nhật triệu chứng S15, bởi vì được tìm thấy trong tập triệu chứng gốc S18, S20, S21, S15, S22. Trả về thành công.
+  Bước 11: -Goal S18. 
+     Cập nhật triệu chứng S18, bởi vì được tìm thấy trong tập triệu chứng gốc S18, S20, S21, S15, S22. Trả về thành công.
+  Bước 12: -Goal S20. 
+     Cập nhật triệu chứng S20, bởi vì được tìm thấy trong tập triệu chứng gốc S18, S20, S21, S15, S22. Trả về thành công.
+  Bước 13: -Goal S21. 
+     Cập nhật triệu chứng S21, bởi vì được tìm thấy trong tập triệu chứng gốc S18, S20, S21, S15, S22. Trả về thành công.
+  Bước 14: -Goal S22. 
+     Cập nhật triệu chứng S22, bởi vì được tìm thấy trong tập triệu chứng gốc S18, S20, S21, S15, S22. Trả về thành công.
+  Bước 15: ==>Goal D4. 
+    Đã được chứng minh, Trả về thành công
+
+KẾT LUẬN BỆNH NGƯỜI DÙNG MẮC PHẢI
+    Goal D4 được chứng minh.
+    Road: R17.
